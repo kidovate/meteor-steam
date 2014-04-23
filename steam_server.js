@@ -65,3 +65,4 @@ var getIdentity = function (steamId) {
 Steam.retrieveCredential = function(credentialToken) {
   return Oauth.retrieveCredential(credentialToken);
 };
+Steam.getIdentity = getIdentity;
