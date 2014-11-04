@@ -1,7 +1,8 @@
 Package.describe({
-  summary: "Steam OAuth flow",
-  // internal for now. Should be external when it has a richer API to do
-  // actual API things with the service, not just handle the OAuth flow.
+  summary: "Steam OAuth flow, used by accounts-steam",
+  name: 'kidovate:steam',
+  version: '1.0.0',
+  git: 'git@github.com:paralin/meteor-accounts-steam.git',
   internal: true
 });
 

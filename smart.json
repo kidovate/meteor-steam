@@ -1,8 +1,0 @@
-{
-  "name": "steam",
-  "description": "Steam OpenId flow, mainly used by accounts-steam",
-  "homepage": "https://github.com/paralin/meteor-steam",
-  "author": "Christian Stewart <kidovate@gmail.com> (http://paral.in)",
-  "version": "0.0.2",
-  "git": "https://github.com/paralin/meteor-steam.git"
-}
