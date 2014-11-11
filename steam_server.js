@@ -1,21 +1,19 @@
 Steam = {};
 
 Oauth.registerService('steam', 2, null, function(query) {
-  // XX fix the state
   query.state = _.last(query['openid.return_to'].split('?close&'));
   var steamId = getSteamId(query);
   var identity = getIdentity(steamId);
 
+  identity.id = identity.steamid;
+  delete identity["steamid"];
+  identity.username = identity.personaname;
+  identity.avatar = {small: identity.avatar, medium: identity.avatarmedium, full: identity.avatarfull};
+  delete identity["avatarmedium"];
+  delete identity["avatarfull"];
+
   return {
-    serviceData: {
-      id: identity.steamid,
-      username: identity.personaname,
-      avatar: {
-      	small: identity.avatar,
-      	medium: identity.avatarmedium,
-      	full: identity.avatarfull
-      }
-    },
+    serviceData: identity,
     options: {profile: { name: identity.personaname }}
   };
 });
