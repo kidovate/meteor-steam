@@ -4,6 +4,6 @@ Template.configureLoginServiceDialogForSteam.siteUrl = function () {
 
 Template.configureLoginServiceDialogForSteam.fields = function () {
   return [
-    {property: 'apiKey', label: 'Steam Web API Key'}
+    {property: 'secret', label: 'Steam Web API Key'}
   ];
 };
