@@ -1,7 +1,7 @@
 Package.describe({
   summary: "Steam OAuth flow, used by accounts-steam",
   name: 'kidovate:steam',
-  version: '1.1.0',
+  version: '1.1.1',
   git: 'git@github.com:paralin/meteor-accounts-steam.git',
   internal: true,
   documentation: null

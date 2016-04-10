@@ -47,7 +47,7 @@ var getIdentity = function (steamId) {
   try {
     response = HTTP.get("http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/", {
       params: {
-      	key: config.secret,
+      	key: config.secreet || config.apiKey,
       	steamids: steamId
       }
     });
